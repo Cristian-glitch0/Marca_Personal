@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marca Personal - Salomé Velásquez</title>
+
+  <!-- Importar Bree Serif desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --verde-claro: #a8d5ba;
+      --beige: #f5f1e3;
+      --cafe-clarito: #d2b48c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Bree Serif', serif;
+    }
+
+    body {
+      background-color: var(--beige);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--verde-claro);
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #2f4f4f;
+    }
+
+    nav {
+      background-color: var(--cafe-clarito);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      position: sticky;
+      top: 80px;
+      z-index: 999;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--verde-claro);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--verde-claro);
+      padding-left: 1rem;
+      color: #2f4f4f;
+    }
+
+    /* Estilos para cuadros que envuelven texto y listas */
+    .cuadro {
+      background-color: var(--verde-claro);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      color: #2f4f4f;
+      line-height: 1.5;
+    }
+
+    /* Aplica márgenes a listas dentro de cuadros para buena separación */
+    .cuadro ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #2f4f4f;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: #2f4f4f;
+    }
+
+    footer {
+      background-color: var(--cafe-clarito);
+      text-align: center;
+      padding: 1rem;
+      font-style: italic;
+      margin-top: 2rem;
+      color: #3b2f1f;
+    }
+  </style>
+
+  <script>
+    function showTab(id) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Salomé Velásquez Grajales</h1>
+  </header>
+
+ <nav>
+  <a href="#" onclick="showTab('inicio')">Inicio</a>
+  <a href="#" onclick="showTab('objetivo')">Objetivo</a>
+  <a href="#" onclick="showTab('valores')">Valores</a>
+  <a href="#" onclick="showTab('dofa')">Matriz DOFA</a>
+  <a href="#" onclick="showTab('reputacion')">Reputación</a>
+  <a href="#" onclick="showTab('publico')">Público</a>
+  <a href="#" onclick="showTab('imagen')">Imagen Visual</a>
+  <a href="#" onclick="showTab('acciones')">Acciones</a>
+  <a href="#" onclick="showTab('Slogan')">Slogan</a>
+  <a href="#" onclick="showTab('hoja')">Hoja de Vida</a>
+<a href="#" onclick="showTab('suenos')">Mapa de Sueños</a>
+
+</nav>
+<section id="hoja" class="tab-content">
+  <h2>Hoja de Vida</h2>
+  <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;">
+    <img src="hoja-de-vida.jpg" alt="Hoja de Vida Salomé Velásquez" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 4px solid var(--verde-claro);">
+  </div>
+</section>
+
+<section id="suenos" class="tab-content">
+  <h2>Mapa de Sueños</h2>
+  <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;">
+    <img src="mapa-de-suenos.jpg" alt="Mapa de Sueños Salomé Velásquez" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 4px solid var(--verde-claro);">
+  </div>
+</section>
+
+
+  <main>
+    <section id="inicio" class="tab-content active">
+      <h2>Inicio</h2>
+      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 2rem;">
+        <img src="logotipo.png" alt="Logotipo Salomé Velásquez" style="width: 180px; height: auto; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 4px solid var(--verde-claro); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div class="cuadro">
+        <p>¡Bienvenidos a mi espacio personal!
+
+Aquí comparto mi camino, valores y propósito como futura psicóloga especializada en psicogerontología. Este espacio nace del deseo profundo de acompañar, escuchar y generar bienestar emocional, especialmente en las personas adultas mayores y quienes los rodean.
+
+A través de cada sección, podrás conocer quién soy, qué me inspira y cómo estoy construyendo una marca personal basada en la empatía, la calidez humana y el compromiso ético.
+
+¡Gracias por estar aquí y ser parte de este viaje hacia una psicología más humana, cercana y significativa!.</p>
+      </div>
+    </section>
+
+    <section id="objetivo" class="tab-content">
+      <h2>Objetivo de Marca Personal</h2>
+      <div class="cuadro">
+        <p>Mi objetivo es convertirme en una psicóloga especializada en psicogerontología, reconocida por un enfoque cercano y humano, centrado en acompañar a las personas mayores en su bienestar emocional. Quiero brindar un apoyo real y significativo, ayudando a fortalecer habilidades emocionales, promover relaciones saludables y ofrecer herramientas para enfrentar los desafíos propios de esta etapa de vida.
+Mi propósito es caminar paso a paso junto a las personas, ayudándolas a alcanzar un bienestar emocional verdadero, desde una psicología empática, comprometida y actualizada.</p>
+      </div>
+    </section>
+
+    <section id="valores" class="tab-content">
+      <h2>Valores</h2>
+      <div class="cuadro">
+        <h3>Funcionales</h3>
+        <ul>
+          <li>Responsabilidad: umplo cada compromiso con puntualidad y seriedad, asegurándome de que mis acciones vayan alineadas con mis objetivos profesionales y personales.</li>
+          <li>Siempre busco hacer mi trabajo lo mejor posible, aspirando a crecer y aprender cada día, especialmente en el área de psicogerontología.</li>
+          <li>Me involucro de lleno en mis proyectos, trabajando con constancia para superar los retos y alcanzar los resultados esperados.</li>
+        </ul>
+        <h3>Sociales</h3>
+        <ul>
+          <li>Empatía: Me esfuerzo por comprender los sentimientos y necesidades de los demás, especialmente de los adultos mayores, lo que me permite brindar un apoyo significativo.</li>
+          <li>Respeto: Valoro las diferencias de cada persona, mostrando consideración por sus historias, pensamientos y emociones.</li>
+          <li>Trabajo en equipo: Creo en la fuerza del trabajo colaborativo, entendiendo que los logros compartidos enriquecen la experiencia tanto profesional como humana.</li>
+        </ul>
+        <h3>Emocionales</h3>
+        <ul>
+          <li>Autocontrol: Sé manejar mis propias emociones, incluso en momentos difíciles, para poder tomar decisiones acertadas.</li>
+          <li>Resiliencia: Tengo la capacidad de levantarme frente a los desafíos emocionales, aprendiendo de cada experiencia y fortaleciéndome.</li>
+          <li>Siento un profundo deseo de aliviar el sufrimiento emocional de quienes acompaño, brindándoles un espacio seguro y acogedor, en especial a las personas mayores.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="dofa" class="tab-content">
+      <h2>Matriz DOFA</h2>
+      <div class="cuadro">
+        <h3>Debilidades</h3>
+        <ul>
+          <li>Tiendo a ser muy autocrítica, lo que a veces me genera presión interna.</li>
+          <li>Mi perfeccionismo puede hacer que me detenga demasiado en detalles, perdiendo tiempo valioso.</li>
+        </ul>
+        <h3>Oportunidades</h3>
+        <ul>
+          <li>Estoy en una etapa clave de formación, con muchas oportunidades para aprender, crecer y especializarme.</li>
+          <li>Tengo la posibilidad de construir una red de contactos profesionales que me abra puertas en el campo de la psicología y el trabajo con adultos mayores.</li>
+        </ul>
+        <h3>Fortalezas</h3>
+        <ul>
+          <li>Soy una mujer profundamente dedicada y comprometida con mi formación y mi futuro como psicóloga especializada en psicogerontología.</li>
+          <li>Cumplo con cada tarea de forma organizada y responsable, generando confianza en quienes me rodean.</li>
+          <li>Me esfuerzo siempre por destacarme, persiguiendo la excelencia en lo que hago.</li>
+          <li>Tengo una gran capacidad de resiliencia, lo que me permite avanzar aun cuando surgen dificultades.</li>
+        </ul>
+        <h3>Amenazas</h3>
+        <ul>
+          <li>El campo de la psicología es altamente competitivo, por lo que necesitaré encontrar mi nicho específico y destacarme.</li>
+          <li>El mundo laboral cambia rápidamente, y eso me exigirá mantenerme siempre actualizada y flexible.</li>
+          <li>El reto de equilibrar estudios, desarrollo profesional y vida personal puede volverse un desafío si no lo gestiono con cuidado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="reputacion" class="tab-content">
+      <h2>Reputación Actual</h2>
+      <div class="cuadro">
+        <ul>
+          <li> Familiares:
+Me ven como una persona responsable, dedicada y cariñosa. Valoran mi compromiso con mis estudios y destacan mi sensibilidad, especialmente hacia los adultos mayores, reflejando mi vocación por la psicogerontología.</li>
+          <li> Amigos:
+Me consideran empática, paciente y confiable. Destacan mi capacidad para escuchar, apoyar y dar consejos sinceros, y valoran la calma y seguridad que transmito.</li>
+          <li>Compañeros de estudio:
+Reconocen mi organización, liderazgo y compromiso. Saben que soy alguien en quien pueden confiar para trabajar en equipo y admiran mi pasión por el área de los adultos mayores.</li>
+          <li>Compañeros de trabajo:
+Me perciben como responsable, adaptable y colaborativa. Valoran mi actitud positiva, mi disposición para aprender y mi sensibilidad hacia las emociones, clave para mi futuro como psicóloga.</li>
+          <li>Resumen general:
+En todos los espacios, soy vista como alguien empática, confiable y dedicada, con una fuerte vocación por ayudar y acompañar emocionalmente, especialmente a las personas mayores.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publico" class="tab-content">
+      <h2>Público Objetivo</h2>
+      <div class="cuadro">
+        <p>Público 1:</p>
+        <p>Demográfico: 20-35 años, hombres/mujeres, universitarios o jóvenes profesionales, zonas urbanas, nivel socioeconómico medio-bajo.</p>
+        <p>Psicográfico: Interesados en bienestar emocional, manejo del estrés, fortalecimiento de autoestima y equilibrio personal-laboral. Buscan terapia para gestionar emociones y crecer personalmente.</p>
+        <p>Público 2:</p>
+        <p>Demográfico: Adultos mayores de 60 años, hombres/mujeres, nivel educativo medio a universitario, jubilados o personas en transición personal, zonas urbanas, nivel socioeconómico medio.</p>
+        <p>Psicográfico: Personas que enfrentan cambios propios del envejecimiento (jubilación, pérdidas, ajustes emocionales). Buscan acompañamiento terapéutico empático para mantener su bienestar, sentirse valorados y fortalecer su resiliencia. Este público conecta directamente con mi enfoque en psicogerontología.</p>
+      </div>
+    </section>
+
+    <section id="imagen" class="tab-content">
+      <h2>Imagen Visual</h2>
+      <div class="cuadro">
+        <p>Logotipo:
+El logotipo de mi marca personal incluye mi nombre completo, Salomé Velásquez Grajales, en una tipografía elegante y legible (Bree Serif), acompañado de una figura humana estilizada con un corazón en el centro, encerrada dentro de un círculo. Este diseño representa la unión entre mente y emociones, reflejando mi enfoque como futura psicóloga especializada en psicogerontología, donde lo humano, lo emocional y el acompañamiento genuino son fundamentales.</p>
+        <p>Colores:</p>
+        <p>Beige: Transmite calma, serenidad y simplicidad. Refleja un ambiente cálido y acogedor, clave para que las personas se sientan cómodas al buscar apoyo emocional.</p>
+     <p>Verde claro: Simboliza esperanza, renovación y crecimiento. Representa el proceso de transformación personal y emocional, tanto en jóvenes como en adultos mayores.</p>
+     <p>Marrón: Aporta estabilidad, confianza y seguridad. Refuerza la idea de un servicio serio, responsable y con un enfoque sólido en el bienestar de los pacientes.</p>
+      </div>
+    </section>
+
+    <section id="acciones" class="tab-content">
+      <h2>Acciones para Fortalecer mi Marca</h2>
+      <div class="cuadro">
+        <ul>
+          <li>Actualizarme continuamente con cursos y talleres.</li>
+          <li>Participar en proyectos comunitarios relacionados con adultos mayores.</li>
+          <li>Crear contenido en redes sociales sobre psicogerontología.</li>
+          <li>Fomentar relaciones profesionales sólidas.</li>
+          <li>Mantener una actitud positiva y ética en todo momento.</li>
+        </ul>
+      </div>
+    </section>
+
+      <section id="Slogan" class="tab-content">
+      <h2>Slogan</h2>
+      <h3>“Bienestar real, contigo en cada paso” </h3>
+      <div class="cuadro">
+        <ul>
+          <li>Este slogan comunica que mi trabajo no es solo ofrecer terapia, sino acompañar de manera cercana y constante a las personas en su proceso emocional, ayudándolas a alcanzar un bienestar verdadero y duradero. Refuerza la idea de que cada paso importa, especialmente cuando se trabaja con adultos mayores, donde cada etapa vital merece atención y cuidado.</li>
+          <li>Tipografía:</li>
+          <li>Uso Bree Serif, una fuente que es profesional pero cercana, elegante pero accesible. Su estilo combina formalidad y calidez, ideales para una psicóloga que trabaja desde la empatía, el respeto y la conexión humana.</li>
+          <li>Imagen general:</li>
+          <li>El conjunto del logotipo y los colores está pensado para transmitir profesionalismo, empatía, cuidado y esperanza. El círculo que encierra el diseño simboliza protección y totalidad, generando la sensación de un espacio seguro. La figura humana con el corazón destaca que en mi marca personal lo emocional es central, y que cada persona será atendida con sensibilidad y compromiso.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Marca Personal Salomé Velásquez - Psicogerontología</p>
+  </footer>
+</body>
+</html>
